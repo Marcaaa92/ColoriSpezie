@@ -14,6 +14,7 @@
 		E58B0DA028EC854D004E4C35 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0D9F28EC854D004E4C35 /* Registration.swift */; };
 		E58B0DA228EC857A004E4C35 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0DA128EC857A004E4C35 /* Login.swift */; };
 		E58B0DA428EC8598004E4C35 /* InserimentoRicetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0DA328EC8598004E4C35 /* InserimentoRicetta.swift */; };
+		E5E7ED2B28ED994800D14DB7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7ED2A28ED994800D14DB7 /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E58B0D9F28EC854D004E4C35 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		E58B0DA128EC857A004E4C35 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E58B0DA328EC8598004E4C35 /* InserimentoRicetta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserimentoRicetta.swift; sourceTree = "<group>"; };
+		E5E7ED2A28ED994800D14DB7 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				E58B0D9328EC84C2004E4C35 /* ContentView.swift */,
 				E58B0D9528EC84C3004E4C35 /* Assets.xcassets */,
 				E58B0D9728EC84C3004E4C35 /* Preview Content */,
+				E5E7ED2A28ED994800D14DB7 /* Home.swift */,
 			);
 			path = ColoriSpezie;
 			sourceTree = "<group>";
@@ -150,6 +153,7 @@
 				E58B0DA428EC8598004E4C35 /* InserimentoRicetta.swift in Sources */,
 				E58B0DA028EC854D004E4C35 /* Registration.swift in Sources */,
 				E58B0D9228EC84C2004E4C35 /* ColoriSpezieApp.swift in Sources */,
+				E5E7ED2B28ED994800D14DB7 /* Home.swift in Sources */,
 				E58B0DA228EC857A004E4C35 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

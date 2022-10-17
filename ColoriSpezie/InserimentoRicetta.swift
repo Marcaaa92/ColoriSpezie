@@ -11,7 +11,7 @@ import SwiftUI
 struct Passaggio: Identifiable {
     let id = UUID()
     var titolo: String
-    var ingredienti: [String]
+    var ingredienti: [Ingrediente]
     var procedimento: String
 }
 
@@ -21,6 +21,8 @@ struct Ricetta {
     var procedimento: [Passaggio]
     var note: String
     var immagine = ""
+    var difficolta: String
+    var descrizione: String
 }
 
 struct Ingrediente: Identifiable {
@@ -30,40 +32,49 @@ struct Ingrediente: Identifiable {
 }
 
 struct RicettaView: View {
-    @State var ricetta = Ricetta(titolo: "Titolo", ingredienti: [Ingrediente(nome: "ing1", quantita: "300 g"), Ingrediente(nome: "ing2", quantita: "600 g")], procedimento: [Passaggio(titolo: "pass1", ingredienti: ["ing1, ing2"], procedimento: "Fai ing1 + 400"), Passaggio(titolo: "pass2", ingredienti: ["ing2"], procedimento: "Fai ing1 + 900")], note: "")
+    var ingredienti: [Ingrediente] = [
+        Ingrediente(
+            nome: "Farina", quantita: "100 g"),
+        Ingrediente(
+            nome: "Acqua", quantita: "100 g")
+    ]
+    @State var ricetta = Ricetta(
+        titolo: "Titolo", ingredienti: [
+            Ingrediente(
+                nome: "Farina", quantita: "100 g"),
+            Ingrediente(
+                nome: "Acqua", quantita: "100 g")
+        ],
+        procedimento: [
+            Passaggio(titolo: "pass1", ingredienti: [
+                Ingrediente(
+                    nome: "Farina", quantita: "100 g"),
+                Ingrediente(
+                    nome: "Acqua", quantita: "100 g")], procedimento: "Fai ing1 + 400"),
+            Passaggio(titolo: "pass2", ingredienti: [
+                Ingrediente(
+                            nome: "Farina", quantita: "100 g"),
+                Ingrediente(
+                            nome: "Acqua", quantita: "100 g")],procedimento: "Fai ing1 + 900")],
+        note: "", difficolta: "Media", descrizione: "Una ricetta a caso")
     
     var body: some View{
-        ScrollView {
-            VStack{
+        //ScrollView(.vertical) {
+            VStack(spacing: 10) {
+                Rectangle()
+                    .foregroundColor(Color.red)
+                    .frame(height: 300, alignment: .center)
                 Text(ricetta.titolo)
+                Text("Difficoltà: " + ricetta.difficolta)
+                Text(ricetta.descrizione)
                 Text("Ingredienti")
-                VStack {
-                    ForEach(ricetta.ingredienti, id: \.id) { ingrediente in
-                        Text("\(ingrediente.nome): \(ingrediente.quantita)")
-                        
-                    }
+                List(/*ricetta.*/ingredienti, id: \.id) { ingr in
+//                    print(ingrediente.nome + ": " + ingrediente.quantita)
+                    Text("\(ingr.nome): \(ingr.quantita)")
                 }
+                Text("AAAAAA")
             }
-            VStack {
-                Text("Procedimento")
-                VStack {
-                    ForEach(ricetta.procedimento, id: \.id) { passaggio in
-                        Text(passaggio.titolo)
-                        Text("Ingredienti utilizzati:")
-                        HStack {
-                            ForEach(passaggio.ingredienti, id: \.self) { ingrediente in
-                                Text(ingrediente)
-                            }
-                        }
-                        Text(passaggio.procedimento)
-                    }
-                }
-            }
-            if (ricetta.note != "") {
-                Text("Note")
-                Text(ricetta.note)
-            }
-        }
+        //}
     }
 }
 
