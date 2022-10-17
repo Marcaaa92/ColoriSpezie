@@ -32,12 +32,12 @@ struct Ingrediente: Identifiable {
 }
 
 struct RicettaView: View {
-    var ingredienti: [Ingrediente] = [
+    /*var ingredienti: [Ingrediente] = [
         Ingrediente(
             nome: "Farina", quantita: "100 g"),
         Ingrediente(
             nome: "Acqua", quantita: "100 g")
-    ]
+    ]*/
     @State var ricetta = Ricetta(
         titolo: "Titolo", ingredienti: [
             Ingrediente(
@@ -68,11 +68,18 @@ struct RicettaView: View {
                 Text("Difficoltà: " + ricetta.difficolta)
                 Text(ricetta.descrizione)
                 Text("Ingredienti")
-                List(/*ricetta.*/ingredienti, id: \.id) { ingr in
-//                    print(ingrediente.nome + ": " + ingrediente.quantita)
+                List(ricetta.ingredienti, id: \.id) { ingr in
                     Text("\(ingr.nome): \(ingr.quantita)")
                 }
-                Text("AAAAAA")
+                Text("Procedimento")
+                List(ricetta.passaggi, id: .\id) { psg
+                    Text(psg.titolo)
+                    Text("Ingredienti utilizzati")
+                    List(psg.ingredienti, id: .\id) { ing
+                        Text("\(ingr.nome): \(ingr.quantita)")
+                    }
+                    Text(psg.procedimento)
+                }
             }
         //}
     }
