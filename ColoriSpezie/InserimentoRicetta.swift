@@ -59,7 +59,7 @@ struct RicettaView: View {
         note: "", difficolta: "Media", descrizione: "Una ricetta a caso")
     
     var body: some View{
-        //ScrollView(.vertical) {
+        ScrollView(.vertical) {
             VStack(spacing: 10) {
                 Rectangle()
                     .foregroundColor(Color.red)
@@ -68,20 +68,26 @@ struct RicettaView: View {
                 Text("Difficoltà: " + ricetta.difficolta)
                 Text(ricetta.descrizione)
                 Text("Ingredienti")
-                List(ricetta.ingredienti, id: \.id) { ingr in
+                VStack{
+                    ForEach(ricetta.ingredienti, id: \.id) { ingr in
                     Text("\(ingr.nome): \(ingr.quantita)")
                 }
+                }
                 Text("Procedimento")
-                List(ricetta.passaggi, id: .\id) { psg
+                VStack{
+                    ForEach(ricetta.procedimento, id: \.id) { psg in
                     Text(psg.titolo)
                     Text("Ingredienti utilizzati")
-                    List(psg.ingredienti, id: .\id) { ing
-                        Text("\(ingr.nome): \(ingr.quantita)")
-                    }
+                        VStack{
+                            ForEach(psg.ingredienti, id: \.id) { ing in
+                            Text("\(ing.nome): \(ing.quantita)")
+                        }
+                        }
                     Text(psg.procedimento)
                 }
+                }
             }
-        //}
+        }
     }
 }
 
