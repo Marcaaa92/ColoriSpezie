@@ -8,55 +8,11 @@
 import SwiftUI
 
 
-struct Passaggio: Identifiable {
-    let id = UUID()
-    var titolo: String
-    var ingredienti: [Ingrediente]
-    var procedimento: String
-}
 
-struct Ricetta {
-    var titolo: String
-    var ingredienti: [Ingrediente]
-    var procedimento: [Passaggio]
-    var note: String
-    var immagine = ""
-    var difficolta: String
-    var descrizione: String
-}
-
-struct Ingrediente: Identifiable {
-    let id = UUID()
-    var nome: String
-    var quantita: String
-}
 
 struct RicettaView: View {
-    /*var ingredienti: [Ingrediente] = [
-        Ingrediente(
-            nome: "Farina", quantita: "100 g"),
-        Ingrediente(
-            nome: "Acqua", quantita: "100 g")
-    ]*/
-    @State var ricetta = Ricetta(
-        titolo: "Titolo", ingredienti: [
-            Ingrediente(
-                nome: "Farina", quantita: "100 g"),
-            Ingrediente(
-                nome: "Acqua", quantita: "100 g")
-        ],
-        procedimento: [
-            Passaggio(titolo: "pass1", ingredienti: [
-                Ingrediente(
-                    nome: "Farina", quantita: "100 g"),
-                Ingrediente(
-                    nome: "Acqua", quantita: "100 g")], procedimento: "Fai ing1 + 400"),
-            Passaggio(titolo: "pass2", ingredienti: [
-                Ingrediente(
-                            nome: "Farina", quantita: "100 g"),
-                Ingrediente(
-                            nome: "Acqua", quantita: "100 g")],procedimento: "Fai ing1 + 900")],
-        note: "", difficolta: "Media", descrizione: "Una ricetta a caso")
+    var ricetta: Ricetta
+
     
     var body: some View{
         ScrollView(.vertical) {
@@ -93,6 +49,6 @@ struct RicettaView: View {
 
 struct RicettaView_Previews: PreviewProvider {
     static var previews: some View {
-        RicettaView()
+        RicettaView(ricetta: ricette[0])
     }
 }

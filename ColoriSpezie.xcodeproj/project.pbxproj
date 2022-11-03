@@ -14,7 +14,10 @@
 		E58B0DA028EC854D004E4C35 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0D9F28EC854D004E4C35 /* Registration.swift */; };
 		E58B0DA228EC857A004E4C35 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0DA128EC857A004E4C35 /* Login.swift */; };
 		E58B0DA428EC8598004E4C35 /* InserimentoRicetta.swift in Sources */ = {isa = PBXBuildFile; fileRef = E58B0DA328EC8598004E4C35 /* InserimentoRicetta.swift */; };
+		E5A7F51628FD5E9700F4A0F5 /* Bookmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7F51528FD5E9700F4A0F5 /* Bookmark.swift */; };
+		E5A7F51828FD681B00F4A0F5 /* Profilo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A7F51728FD681B00F4A0F5 /* Profilo.swift */; };
 		E5E7ED2B28ED994800D14DB7 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7ED2A28ED994800D14DB7 /* Home.swift */; };
+		E5EDD63E28FDAD90003EFAE7 /* Ricette.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EDD63D28FDAD90003EFAE7 /* Ricette.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,10 @@
 		E58B0D9F28EC854D004E4C35 /* Registration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		E58B0DA128EC857A004E4C35 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		E58B0DA328EC8598004E4C35 /* InserimentoRicetta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InserimentoRicetta.swift; sourceTree = "<group>"; };
+		E5A7F51528FD5E9700F4A0F5 /* Bookmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bookmark.swift; sourceTree = "<group>"; };
+		E5A7F51728FD681B00F4A0F5 /* Profilo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profilo.swift; sourceTree = "<group>"; };
 		E5E7ED2A28ED994800D14DB7 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		E5EDD63D28FDAD90003EFAE7 /* Ricette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ricette.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 		E58B0D8528EC84C2004E4C35 = {
 			isa = PBXGroup;
 			children = (
+				E5EDD63D28FDAD90003EFAE7 /* Ricette.swift */,
 				E58B0D9028EC84C2004E4C35 /* ColoriSpezie */,
 				E58B0D8F28EC84C2004E4C35 /* Products */,
 			);
@@ -59,6 +66,7 @@
 		E58B0D9028EC84C2004E4C35 /* ColoriSpezie */ = {
 			isa = PBXGroup;
 			children = (
+				E5A7F51528FD5E9700F4A0F5 /* Bookmark.swift */,
 				E58B0D9128EC84C2004E4C35 /* ColoriSpezieApp.swift */,
 				E58B0D9F28EC854D004E4C35 /* Registration.swift */,
 				E58B0DA328EC8598004E4C35 /* InserimentoRicetta.swift */,
@@ -67,6 +75,7 @@
 				E58B0D9528EC84C3004E4C35 /* Assets.xcassets */,
 				E58B0D9728EC84C3004E4C35 /* Preview Content */,
 				E5E7ED2A28ED994800D14DB7 /* Home.swift */,
+				E5A7F51728FD681B00F4A0F5 /* Profilo.swift */,
 			);
 			path = ColoriSpezie;
 			sourceTree = "<group>";
@@ -152,8 +161,11 @@
 				E58B0D9428EC84C2004E4C35 /* ContentView.swift in Sources */,
 				E58B0DA428EC8598004E4C35 /* InserimentoRicetta.swift in Sources */,
 				E58B0DA028EC854D004E4C35 /* Registration.swift in Sources */,
+				E5A7F51828FD681B00F4A0F5 /* Profilo.swift in Sources */,
 				E58B0D9228EC84C2004E4C35 /* ColoriSpezieApp.swift in Sources */,
+				E5EDD63E28FDAD90003EFAE7 /* Ricette.swift in Sources */,
 				E5E7ED2B28ED994800D14DB7 /* Home.swift in Sources */,
+				E5A7F51628FD5E9700F4A0F5 /* Bookmark.swift in Sources */,
 				E58B0DA228EC857A004E4C35 /* Login.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

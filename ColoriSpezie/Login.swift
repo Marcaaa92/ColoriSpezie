@@ -41,6 +41,7 @@ struct LoginView: View {
             .cornerRadius(8)
             Spacer()
         }
+        .navigationBarBackButtonHidden(true)
     }
 }
 struct userLogin {

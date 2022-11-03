@@ -57,33 +57,33 @@ struct InEvidenzaView: View {
     }
 }
 
-struct ColorListPreviews: PreviewProvider {
-    static var previews: some View {
+struct HomeView: View {
+    var body: some View {
         TabView {
             ColorListView()
         .tabItem {
         Image(systemName: "house.fill")
         Text("Home")
         }
-        Text("Bookmark Tab")
+        BookmarkView()
         .font(.system(size: 30, weight: .bold, design: .rounded))
         .tabItem {
         Image(systemName: "bookmark.circle.fill")
         Text("Bookmark")
         }
-        Text("Video Tab")
-        .font(.system(size: 30, weight: .bold, design: .rounded))
-        .tabItem {
-        Image(systemName: "video.circle.fill")
-        Text("Video")
-        }
-        Text("Profile Tab")
+        Profilo()
         .font(.system(size: 30, weight: .bold, design: .rounded))
         .tabItem {
         Image(systemName: "person.crop.circle")
         Text("Profile")
         }
         }
+    }
+}
+
+struct ColorListPreviews: PreviewProvider {
+    static var previews: some View {
+        HomeView()
         
     }
 }
